@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico?" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>OAuth - Login and Registration - Shihab Jamil</title>
+</head>
+<body>
+
+    <div class="banner">
+         <div class="form-box">
+             <div class="button-box">
+                 <div id="btn"></div>
+                 <button type="button" class="toggle-btn" onclick="showLoginForm()">Login</button>
+                 <button type="button" class="toggle-btn" onclick="showRegForm()">Register</button>
+             </div>
+             <div class="social-icons">
+                <i class="fa fa-facebook-square"></i>
+                <i class="fa fa-google"></i>
+                <i class="fa fa-github"></i>
+             </div>
+
+             <form class="input-group" id="login-form">
+                 <input class="input-field" type="text" placeholder="Email">
+                 <input class="input-field" type="password" placeholder="Password">
+                 <input type="checkbox" class="check-box"><span>Remember Me</span>
+                 <button type="submit" class="submit-btn">Login</button>
+             </form>
+
+             <form class="input-group" id="reg-form">
+                <input class="input-field" type="text" placeholder="Email">
+                <input class="input-field" type="password" placeholder="Password">
+                <input class="input-field" type="password" placeholder="Confirm Password">
+                <input type="checkbox" class="check-box"><span>I agree to the <a href="">Terms & Conditions</a></span>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+            <div class="copyright">Copyright 2020 - <a href="https://www.linkedin.com/in/shihabjamil/">Shihab Jamil</a></div>
+        </div>     
+    </div>
+
+    <script>
+        const login_form = document.getElementById("login-form");
+        const reg_form = document.getElementById("reg-form");
+        const btn = document.getElementById("btn");
+
+        function showRegForm() {
+            login_form.style.left = "-480px";
+            reg_form.style.left = "50px"
+            btn.style.left = "110px"
+        }
+
+        function showLoginForm() {
+            login_form.style.left = "50px";
+            reg_form.style.left = "450px";
+            btn.style.left = "0px"
+        }
+
+
+    </script>
+    
+</body>
+</html>
